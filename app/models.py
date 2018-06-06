@@ -36,6 +36,7 @@ class Employee(UserMixin, db.Model):
         """Check is hashed password matched actual password"""
         return check_password_hash(self.password_hash, password=password)
 
+
     def __repr__(self):
         return '<Employee: {}>'.format(self.username)
 
